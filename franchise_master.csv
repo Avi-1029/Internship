@@ -1,0 +1,5 @@
+franchise_code,franchise_desc,lead_time_month,safety_stock
+F01,AutoPro,2,10
+F02,BrakeMasters,1,5
+F03,SparkCo,3,8
+F04,CoolRides,2,6

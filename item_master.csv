@@ -1,0 +1,31 @@
+Franchise,Item Code,Item Desc,Current Stock,Unit Price,Backorder Qty,Current Monthly Sales,Last Month Sales,Last Month Sales - 1,Last Month Sales - 2,Last Month Sales - 3,Last Month Sales - 4,Last Month Sales - 5
+F01,P001,Oil Filter,20,5.0,5,18,20,20,10,22,15,13
+F01,P002,Air Filter,10,7.5,2,12,12,21,12,12,9,4
+F02,P003,Brake Pad,5,25.0,1,8,5,4,5,7,5,6
+F03,P004,Spark Plug,15,3.5,0,10,11,8,12,9,10,10
+F02,P005,Fuel Pump,8,18.0,3,14,16,13,11,10,12,9
+F04,P006,Radiator,4,45.0,2,5,7,8,6,7,6,5
+F01,P007,Headlight,12,20.0,0,9,10,11,12,10,8,9
+F03,P008,Wiper Blade,25,2.0,0,20,18,19,20,22,21,20
+F02,P009,Alternator,6,35.0,1,6,8,7,6,7,5,6
+F04,P010,Battery,10,50.0,4,11,13,12,14,15,13,11
+F01,P011,Timing Belt,7,12.0,2,7,6,8,7,9,8,7
+F03,P012,Fan Belt,9,9.0,1,10,11,12,10,9,10,11
+F02,P013,Shock Absorber,4,40.0,3,5,6,5,4,6,5,4
+F01,P014,Clutch Plate,6,30.0,0,8,9,7,8,7,8,6
+F04,P015,Oil Pump,3,28.0,2,4,5,6,5,4,5,5
+F03,P016,Thermostat,11,15.0,0,12,13,12,11,10,12,11
+F02,P017,Water Pump,8,27.0,1,10,11,9,10,11,10,9
+F01,P018,Brake Disc,5,22.0,3,6,6,5,7,6,5,6
+F04,P019,Gearbox,2,100.0,1,3,4,3,2,4,3,2
+F03,P020,Ignition Coil,13,17.0,0,11,10,12,13,11,10,12
+F02,P021,Axle Shaft,4,45.0,2,7,6,7,6,5,7,6
+F01,P022,Engine Mount,6,23.0,1,5,5,4,6,5,5,4
+F03,P023,Control Arm,9,30.0,0,9,10,9,8,10,9,10
+F04,P024,Muffler,3,35.0,2,4,4,3,4,5,4,3
+F02,P025,Crankshaft,5,80.0,1,6,7,6,5,6,5,6
+F01,P026,Camshaft,7,70.0,2,7,8,7,9,8,7,6
+F03,P027,Cabin Filter,14,6.0,0,13,12,11,13,14,12,13
+F04,P028,Timing Chain,4,55.0,1,5,6,5,6,5,4,5
+F02,P029,EGR Valve,6,32.0,1,8,9,8,7,9,8,7
+F01,P030,Turbocharger,3,120.0,3,4,5,6,4,5,6,4
