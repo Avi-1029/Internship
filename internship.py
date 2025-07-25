@@ -13,9 +13,22 @@ itemdf["Avg Monthly Sales"] = itemdf[["Last Month Sales", "Last Month Sales - 1"
 print(itemdf.head(10))
 
 #Calculating the demand during lead time:
-
 lead_demand = []
-for fcode, sales in itemdf[["Franchise", "Avg Monthly Sales"]]:
-    demand = frandf.loc[frandf["franchise_code"] == fcode, "lead_time_month"]*sales
-    lead_demand.append(demand)
-print(lead_demand)
+for i in itemdf.index:
+    fcode = itemdf.loc[i, "Franchise"]
+    lead_time = frandf.loc[frandf["franchise_code"] == fcode , "lead_time_month"].values
+    sales = itemdf.loc[i, "Avg Monthly Sales"]
+    demand = sales*lead_time
+    lead_demand.append(demand[0])
+itemdf["Lead_time_demand"] = lead_demand
+
+#Calculating suggested orders:
+safetystock = []
+for i in itemdf.index:
+    fcode = itemdf.loc[i, "Franchise"]
+    ss = frandf.loc[frandf["franchise_code"] == fcode, "safety_stock"].values
+    safetystock.append(ss[0])
+safetystock = pd.Series(safetystock)
+
+itemdf["Suggested_order"] = np.ceil((itemdf["Lead_time_demand"] + safetystock) - (itemdf["Current Stock"] + itemdf["Backorder Qty"]))
+print(itemdf.head())
