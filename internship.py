@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.linear_model import LinearRegression
 
 itemdf = pd.read_csv(r"C:\Users\Biju\Desktop\Jetlearn\Data Science\Internship\item_master.csv")
 itemdf.info()
@@ -32,3 +33,28 @@ safetystock = pd.Series(safetystock)
 
 itemdf["Suggested_order"] = np.ceil((itemdf["Lead_time_demand"] + safetystock) - (itemdf["Current Stock"] + itemdf["Backorder Qty"]))
 print(itemdf.head())
+#itemdf.to_csv("Item_master_new.csv")
+
+#Prediction model
+#Selecting features and target
+x = itemdf[["Lead_time_demand", "Current Stock", "Backorder Qty"]]
+x["Safety Stock"] = safetystock
+y = itemdf["Suggested_order"]
+
+#Building model
+model = LinearRegression()
+model.fit(x,y)
+#bob = np.ceil(model.predict(x))
+#from sklearn.metrics import root_mean_squared_error
+#error = root_mean_squared_error(y, bob)
+#print(error)
+
+Lead_time= int(input("Enter the lead time: "))
+avgmonthsale = float(input("Enter the average monthly sales: "))
+inputsafetystock = int(input("Enter the safety stock: "))
+backorder = int(input("Enter the Backorder quantity: "))
+currentstock = int(input("Enter the current stock: "))
+
+sugordpred = model.predict([[Lead_time*avgmonthsale, currentstock, backorder, inputsafetystock]])
+final = np.ceil(sugordpred)[0]
+print("Your suggested order is: ", final)
