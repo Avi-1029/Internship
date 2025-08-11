@@ -1,4 +1,4 @@
-import pandas as pd
+iimport pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.linear_model import LinearRegression
@@ -58,3 +58,4 @@ currentstock = int(input("Enter the current stock: "))
 sugordpred = model.predict([[Lead_time*avgmonthsale, currentstock, backorder, inputsafetystock]])
 final = np.ceil(sugordpred)[0]
 print("Your suggested order is: ", final)
+
